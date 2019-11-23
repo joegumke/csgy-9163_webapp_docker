@@ -1,0 +1,12 @@
+<p>Spell Checker Results</p>
+<a href="http://localhost:8080/home">HOME</a> 
+<a href="http://localhost:8080/login">LOGIN</a> 
+<a href="http://localhost:8080/spell_check">SPELL_CHECK</a>
+<a href="http://localhost:8080/register">REGISTER</a>
+<a href="http://localhost:8080/history">USER QUERY HISTORY</a>
+<a href="http://localhost:8080/login_history">USER LOGIN HISTORY</a>
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+<p> Query ID: <div id=queryid>{{ queryID }} </p>
+<p> Username: <div id=username>{{username }} </p>
+<p> Requested Text: <div id=querytext>{{ submitText }} </p>
+<p> Returned Text : <div id=queryresults>{{ results }} </p>

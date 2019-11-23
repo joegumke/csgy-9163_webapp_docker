@@ -1,0 +1,20 @@
+<!doctype html>
+<a href="http://localhost:8080/home">HOME</a> 
+<a href="http://localhost:8080/login">LOGIN</a> 
+<a href="http://localhost:8080/spell_check">SPELL_CHECK</a>
+<a href="http://localhost:8080/register">REGISTER</a>
+<a href="http://localhost:8080/history">USER QUERY HISTORY</a>
+<a href="http://localhost:8080/login_history">USER LOGIN HISTORY</a>
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+<html>
+   <body>
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
